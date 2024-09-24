@@ -62,7 +62,7 @@ if (curPlayerDirection != Direction.None && curPlayerDirection != prevPlayerDire
 
 ---
 
-### Instructions to Modify Player Movement Speed in Bitsy
+## Instructions to Modify Player Movement Speed in Bitsy
 
 1. **Open the Bitsy code file** where the `playerHoldToMoveTimer` variable is defined. This variable controls the delay between player movements.
 
