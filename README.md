@@ -56,11 +56,29 @@ Now, you can run the game normally. The value of `playerHoldToMoveTimer` should 
 
 ## Instructions to Modify Player Movement Speed in Bitsy
 
-1. **Open the Bitsy code file** where the `playerHoldToMoveTimer` variable is defined. This variable controls the delay between player movements.
+1. **Locate the Line to Change:**
+   Open your Bitsy code file and search for the following block of code:
 
-2. **Search for all occurrences of `playerHoldToMoveTimer`** that are set to the default value of `150`. This value defines the player movement speed and delay.
+```javascript
+if (playerHoldToMoveTimer <= 0) {
+    movePlayer(curPlayerDirection, false /* isFirstMove */);
+    playerHoldToMoveTimer = 150;
+    // playerHoldToMoveTimer = 16; // PERF TEST
+}
+```
 
-3. **Replace the default value of `150` with `100`** to increase the movement speed.
+2. **Modify the Value:**
+   Change the value of `playerHoldToMoveTimer = 150;` to your desired value, such as `100`.
+
+   The modified block should look like this:
+
+```javascript
+if (playerHoldToMoveTimer <= 0) {
+    movePlayer(curPlayerDirection, false /* isFirstMove */);
+    playerHoldToMoveTimer = 100;
+// playerHoldToMoveTimer = 16; // PERF TEST
+}
+```
 
 ---
 
