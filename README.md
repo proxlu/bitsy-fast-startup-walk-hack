@@ -60,10 +60,6 @@ if (curPlayerDirection != Direction.None && curPlayerDirection != prevPlayerDire
 }
 ```
 
-## Final Considerations
-
-Be sure to test the game after the change to ensure everything is functioning as expected. If you encounter any issues, you can restore the original file from the backup you created earlier.
-
 ---
 
 ### Instructions to Modify Player Movement Speed in Bitsy
@@ -87,3 +83,9 @@ sed -i 's/playerHoldToMoveTimer = 150;/playerHoldToMoveTimer = 100;/g' path/to/y
 Make sure to replace `path/to/your/bitsy/code.js` with the actual path to your Bitsy code file.
 
 This will ensure that all instances of the player movement timer are adjusted to speed up movement in the game.
+
+---
+
+## Final Considerations
+
+Be sure to test the game after the change to ensure everything is functioning as expected. If you encounter any issues, you can restore the original file from the backup you created earlier.
