@@ -54,7 +54,7 @@ Now, you can run the game normally. The value of `playerHoldToMoveTimer` should 
 
 ---
 
-## Instructions to Modify Player Movement Speed in Bitsy
+## Instructions to Modify Player Movement Speed in Bitsy (Extra/Preferential)
 
 1. **Locate the Line to Change:**
    Open your Bitsy code file and search for the following block of code:
