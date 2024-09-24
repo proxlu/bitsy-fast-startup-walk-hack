@@ -63,3 +63,27 @@ if (curPlayerDirection != Direction.None && curPlayerDirection != prevPlayerDire
 ## Final Considerations
 
 Be sure to test the game after the change to ensure everything is functioning as expected. If you encounter any issues, you can restore the original file from the backup you created earlier.
+
+---
+
+### Instructions to Modify Player Movement Speed in Bitsy
+
+1. **Open the Bitsy code file** where the `playerHoldToMoveTimer` variable is defined. This variable controls the delay between player movements.
+
+2. **Search for all occurrences of `playerHoldToMoveTimer`** that are set to the default value of `150`. This value defines the player movement speed and delay.
+
+3. **Replace the default value of `150` with `100`** to increase the movement speed.
+
+---
+
+### Automating the Change with `sed`
+
+To automatically update all instances of `playerHoldToMoveTimer = 150;` to `playerHoldToMoveTimer = 100;`, you can run the following command in your terminal:
+
+```bash
+sed -i 's/playerHoldToMoveTimer = 150;/playerHoldToMoveTimer = 100;/g' path/to/your/bitsy/code.js
+```
+
+Make sure to replace `path/to/your/bitsy/code.js` with the actual path to your Bitsy code file.
+
+This will ensure that all instances of the player movement timer are adjusted to speed up movement in the game.
