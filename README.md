@@ -42,23 +42,15 @@ sed -i 's/playerHoldToMoveTimer = 500;/playerHoldToMoveTimer = 150;/' bitsy_game
 Open the `bitsy_game.html` file in your text editor and check if the line has been changed correctly:
 
 ```javascript
-playerHoldToMoveTimer = 150; // Changed to 150
-```
-
-### 5. Run the Game
-
-Now, you can run the game normally. The value of `playerHoldToMoveTimer` should be 150, allowing for faster movement.
-
-## Complete Code for the Change
-
-If you prefer to make the change manually, here is the code snippet that should be altered in `bitsy_game.html`:
-
-```javascript
 if (curPlayerDirection != Direction.None && curPlayerDirection != prevPlayerDirection) {
     movePlayer(curPlayerDirection, true /* isFirstMove */);
     playerHoldToMoveTimer = 150; // Changed to 150
 }
 ```
+
+### 5. Run the Game
+
+Now, you can run the game normally. The value of `playerHoldToMoveTimer` should be 150, allowing for faster movement.
 
 ---
 
@@ -74,13 +66,13 @@ if (curPlayerDirection != Direction.None && curPlayerDirection != prevPlayerDire
 
 ### Automating the Change with `sed`
 
-To automatically update all instances of `playerHoldToMoveTimer = 150;` to `playerHoldToMoveTimer = 100;`, you can run the following command in your terminal:
+To automatically update a instance of `playerHoldToMoveTimer = 150;` to `playerHoldToMoveTimer = 100;`, you can run the following command in your terminal:
 
 ```bash
-sed -i 's/playerHoldToMoveTimer = 150;/playerHoldToMoveTimer = 100;/g' path/to/your/bitsy/code.js
+sed -i 's/playerHoldToMoveTimer = 150;/playerHoldToMoveTimer = 100;/' path/to/your/bitsy_game.html
 ```
 
-Make sure to replace `path/to/your/bitsy/code.js` with the actual path to your Bitsy code file.
+Make sure to replace `path/to/your/bitsy/bitsy_game.html` with the actual path to your Bitsy code file.
 
 This will ensure that all instances of the player movement timer are adjusted to speed up movement in the game.
 
